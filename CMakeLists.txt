@@ -47,13 +47,3 @@ elseif (STRING_ENCODING_TYPE STREQUAL "NONE")
 else()
     # User action requested
 endif()
-
-if (WIN32)
-    install(TARGETS ${PROJECT_NAME}
-        RUNTIME DESTINATION lib)
-else()
-    install (TARGETS ${PROJECT_NAME}
-        LIBRARY DESTINATION lib
-        PUBLIC_HEADER DESTINATION include/kaitai
-    )
-endif()
